@@ -1,0 +1,69 @@
+body { margin:0; font-family: Arial; background:#fafafa; }
+
+header { background:#333; padding:10px; color:white; text-align:center; }
+
+.store-name { color:gold; font-size:28px; margin:5px 0; }
+
+nav button { margin:5px; padding:8px 15px; background:#444; color:white; border:none; cursor:pointer; border-radius:5px; }
+
+nav button:hover { background:#555; }
+
+.search-box { margin-top:10px; }
+
+.search-box input { padding:7px; width:200px; }
+
+.search-box button { padding:7px 12px; }
+
+.category-title { padding:15px; background:lightgray; margin-top:20px; }
+
+.product-container, .cart-products { display:flex; flex-wrap:wrap; padding:10px; }
+
+.product-card, .cart-card { background:white; padding:10px; margin:10px; width:150px; border-radius:8px; box-shadow:0 0 4px #888; text-align:center; }
+
+.product-card img, .cart-card img { width:100%; height:120px; object-fit:cover; border-radius:6px; }
+
+.discount { color:red; font-weight:bold; }
+
+.final-price { color:green; font-weight:bold; }
+
+/* POPUPS */
+
+.popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); display:none; justify-content:center; align-items:center; overflow:auto; z-index:200; }
+
+.scrollable-popup { max-height:90vh; overflow-y:auto; padding:20px; }
+
+.popup-content { background:white; padding:20px; width:300px; border-radius:8px; text-align:center; }
+
+#addedList div, #adList div, #adPopupList div { background:#ddd; padding:5px; margin-top:5px; border-radius:5px; }
+
+.cart-page { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:white; padding:20px; overflow-y:auto; z-index:100; }
+
+.cart-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+
+.closeCartBtn { background:red; color:white; border:none; padding:12px 18px; font-size:20px; font-weight:bold; cursor:pointer; border-radius:5px; }
+
+.cartBtn { margin-top:5px; padding:5px 10px; background:orange; border:none; color:white; cursor:pointer; }
+
+#adBtn { margin:10px auto; display:block; padding:8px 15px; background:purple; color:white; border:none; border-radius:5px; cursor:pointer; }
+
+/* AD SLIDER */
+
+.ad-slider-container { position:relative; width:85%; max-width:700px; margin:20px auto; overflow:hidden; border-radius:8px; height:360px; }
+
+.ad-slider { display:flex; transition:0.5s ease; touch-action: pan-y; height:100%; }
+
+.ad-card { min-width:100%; text-align:center; display:flex; justify-content:center; align-items:center; }
+
+.ad-card img, .ad-card video { max-width:100%; max-height:100%; object-fit:cover; border-radius:8px; }
+
+.ad-slider-container .prev, .ad-slider-container .next {
+
+    position:absolute; top:50%; transform:translateY(-50%);
+
+    background:rgba(0,0,0,0.5); color:white; border:none; font-size:30px; padding:5px 10px; cursor:pointer; border-radius:5px;
+
+}
+
+.ad-slider-container .prev { left:10px; }
+
+.ad-slider-container .next { right:10px; }

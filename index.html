@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SRI VELAN STORE</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1 class="store-name">SRI VELAN STORE</h1>
+
+    <nav>
+
+        <button onclick="scrollToCategory('utility')">Utility</button>
+
+        <button onclick="scrollToCategory('furniture')">Furniture</button>
+
+        <button onclick="scrollToCategory('electronics')">Electronics</button>
+
+        <button id="profileBtn" onclick="openLogin()">Profile</button>
+
+        <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+
+        <button onclick="openCartPage()">Cart</button>
+
+    </nav>
+
+    <div class="search-box">
+
+        <input type="text" id="searchInput" placeholder="Search product...">
+
+        <button onclick="searchProduct()">Search</button>
+
+    </div>
+
+</header>
+
+<!-- AD SLIDER -->
+
+<div class="ad-slider-container" id="adSliderContainer">
+
+    <button class="prev" onclick="prevAd()">&#10094;</button>
+
+    <div id="adSlider" class="ad-slider"></div>
+
+    <button class="next" onclick="nextAd()">&#10095;</button>
+
+</div>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage" class="popup">
+
+    <div class="popup-content scrollable-popup">
+
+        <h2>Login</h2>
+
+        <input type="text" id="loginUser" placeholder="Username">
+
+        <input type="password" id="loginPass" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <button onclick="closeLogin()">Close</button>
+
+        <p id="loginError"></p>
+
+    </div>
+
+</div>
+
+<!-- ADMIN PAGE -->
+
+<div id="adminPage" class="popup">
+
+    <div class="popup-content scrollable-popup">
+
+        <h2>Admin Panel</h2>
+
+        <button id="adBtn" onclick="openAdPopup()">AD</button>
+
+        <h3>Add Product</h3>
+
+        <input type="text" id="pName" placeholder="Product Name">
+
+        <input type="number" id="pPrice" placeholder="Price">
+
+        <input type="number" id="pDiscount" placeholder="Discount %">
+
+        <select id="pCategory">
+
+            <option value="utility">Utility</option>
+
+            <option value="furniture">Furniture</option>
+
+            <option value="electronics">Electronics</option>
+
+        </select>
+
+        <input type="file" id="pImage" accept="image/*">
+
+        <button onclick="addProduct()">Add Product</button>
+
+        <h3>Added Products</h3>
+
+        <div id="addedList"></div>
+
+        <h3>Added Ads</h3>
+
+        <div id="adList"></div>
+
+        <button onclick="closeAdmin()">Close</button>
+
+    </div>
+
+</div>
+
+<!-- AD POPUP -->
+
+<div id="adPopup" class="popup">
+
+    <div class="popup-content scrollable-popup">
+
+        <h2>Add Advertisement</h2>
+
+        <input type="file" id="adFile" accept="image/*,video/*">
+
+        <button onclick="addAd()">Add</button>
+
+        <button onclick="closeAdPopup()">Close</button>
+
+        <h3>Added Ads</h3>
+
+        <div id="adPopupList"></div>
+
+    </div>
+
+</div>
+
+<!-- CART PAGE -->
+
+<div id="cartPage" class="cart-page">
+
+    <div class="cart-header">
+
+        <h2>Cart</h2>
+
+        <button class="closeCartBtn" onclick="closeCartPage()">X</button>
+
+    </div>
+
+    <div id="cartList" class="cart-products"></div>
+
+    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+</div>
+
+<!-- CATEGORY SECTIONS -->
+
+<h2 class="category-title" id="utility">Utility</h2>
+
+<div class="product-container" id="utilityList"></div>
+
+<h2 class="category-title" id="furniture">Furniture</h2>
+
+<div class="product-container" id="furnitureList"></div>
+
+<h2 class="category-title" id="electronics">Electronics</h2>
+
+<div class="product-container" id="electronicsList"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
